@@ -1,0 +1,1 @@
+export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
