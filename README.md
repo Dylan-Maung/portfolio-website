@@ -1,16 +1,35 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio showcasing my projects, experience and skills as a software developer.
 
-Currently, two official plugins are available:
+> 🚧 **Work in Progress** - Currently building out additional sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links
 
-## React Compiler
+- **LinkedIn:** https://www.linkedin.com/in/dylan-maung-741975220/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- Three.js / React Three Fiber / Drei
+- Tailwind CSS
+- Blender (3D modeling)
+- GSAP
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 3D graphics and custom models (Three.js)
+- Smooth scroll animations (GSAP)
+- Responsive design
+- Interactive UI elements
+  
+## 🚀 Run Locally (Optional)
+
+```bash
+npm install
+npm run dev
+```
+
+## 📬 Contact
+
+Feel free to reach out at maungdylan@gmail.com
