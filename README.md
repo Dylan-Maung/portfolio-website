@@ -6,6 +6,7 @@ Personal portfolio showcasing my projects, experience and skills as a software d
 
 ## 🔗 Links
 
+- **Website:** https://dylan-maung.github.io/portfolio-website/
 - **LinkedIn:** https://www.linkedin.com/in/dylan-maung-741975220/
 
 ## 🛠️ Tech Stack
