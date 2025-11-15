@@ -8,4 +8,4 @@ const NeonLine = ({ className = "" }) => {
     );
 };
 
-export default NeonLine
+export default NeonLine 

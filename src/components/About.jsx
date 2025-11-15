@@ -15,17 +15,21 @@ const About = () => {
         <section id="about" className='w-full min-h-screen overflow-hidden pt-20'>
             <div className='flex flex-col md:flex-row w-full justify-center gap-8 mb-16 pt-2'>
                 <div id="picture" className='w-64 h-64 flex border-2 border-red-950 shadow-[0_0_20px_rgba(220,38,38,0.3)] rounded-full items-center justify-center flex-shrink-0 overflow-hidden'>
-                    <img src="/profile.jpeg" alt="Portfolio Picture" className='w-full h-full object-cover'/>
+                    <img src={`${import.meta.env.BASE_URL}profile.jpeg`} alt="Portfolio Picture" className='w-full h-full object-cover'/>
                 </div>
 
-                <div id="intro" className='max-w-lg border border-red-400 text-left p-6'
+                <div id="intro" className='max-w-2xl border border-red-400 text-left p-6'
                     style={{
                         boxShadow: '0 0 30px rgba(220, 38, 38, 0.4), 0 0 60px rgba(220, 38, 38, 0.2)'
                     }}
                 >
                     <NeonText>
-                        Hi, I'm Dylan a recent computer engineering graduate drawn to the complexity of machine learning and AI. I'm fascinated by how mathematical models can learn and make decisions through neural networks — it's a puzzle I can't stop trying to understand.
-                        When I'm not debugging code or training models, you'll find me at the climbing gym working through boulder problems. Turns out I like solving puzzles whether they're in Python or on a wall. 
+                        <p className='mb-4 indent-8'>
+                            Hi, I'm Dylan, a recent computer engineering graduate drawn to the complexity of machine learning and AI. I'm fascinated by how mathematical models can learn and make decisions through neural networks — it's a puzzle I can't stop trying to understand.
+                        </p>
+                        <p className='indent-8'>
+                            When I'm not debugging code or training models, you'll find me at the climbing gym working through boulder problems. Turns out I like solving puzzles whether they're in Python or on a wall.
+                        </p>
                     </NeonText>
                 </div>
             </div>

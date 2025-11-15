@@ -4,10 +4,9 @@ import { Suspense } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react';
-import NeonText from './ui/NeonText'
 
 function Model() {
-    const { scene } = useGLTF('/turtle.glb')
+    const { scene } = useGLTF(`${import.meta.env.BASE_URL}turtle.glb`)
     return <primitive object={scene} rotation={[Math.PI, 0, 0]} scale={5} />
 }
 
@@ -19,7 +18,6 @@ const Hero = () => {
 
     return (
         <section className='w-full h-screen relative overflow-hidden'>
-            
             <div className='w-full h-screen flex flex-col items-center pt-20'>
                 <h1 id="hero" className='text-semibold text-white text-4xl md:text-5xl lg:text-6xl translate-y-20 opacity-0'>
                     Explore the Depths.
