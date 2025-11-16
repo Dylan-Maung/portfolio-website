@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import NeonText from './ui/NeonText'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 const ProjectCard = ({ project, className }) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isLocked, setIsLocked] = useState(false)
+  const containerRef = useRef(null)
 
   useEffect(() => {
     if (isHovered) {
@@ -17,12 +18,18 @@ const ProjectCard = ({ project, className }) => {
   }, [isHovered])
 
   useGSAP(() => {
-    gsap.fromTo('#ring', {x: 150, y: -150, opacity: 0, scale: 2}, {x:0, y: 0, opacity: 1, scale: 1, duration: 0.2, stagger: 0.1, ease: 'power2.out' });
-
+    if (isHovered) {
+      gsap.fromTo(containerRef.current.querySelectorAll('.ring'), {x: 150, y: -150, opacity: 0, scale: 2}, {x:0, y: 0, opacity: 1, scale: 1, duration: 0.2, stagger: 0.1, ease: 'power2.out' });
+      gsap.to(containerRef.current.querySelectorAll('.bracket'), {opacity: 1})
+    } else {
+      gsap.to(containerRef.current.querySelectorAll('.ring'), {x: 150, y: -150, opacity: 0, scale: 2})
+      gsap.to(containerRef.current.querySelectorAll('.bracket'), {opacity: 0})
+    }
   }, [isHovered])
 
   return (
-    <div 
+    <div
+      ref={containerRef}
       className={`relative w-full max-w-sm mx-auto ${className || ''}`} 
       style={{ height: '400px' }}
       onMouseEnter={() => setIsHovered(true)}
@@ -38,30 +45,26 @@ const ProjectCard = ({ project, className }) => {
         </div>
       )}
       
-      {isHovered && (
-        <div className='absolute inset-0 pointer-events-none z-20'>
-          <div 
-            id='ring'
-            className='absolute inset-0 border-4 rounded-full border-white'
-            style={{
-              boxShadow: '0 0 20px rgba(255,255,255,0.8), inset 0 0 20px rgba(255,255,255,0.3)'
-            }}
-          ></div>
+      <div className='absolute inset-0 pointer-events-none z-20'>
+        <div
+          className='ring absolute inset-0 border-4 rounded-full border-white opacity-0'
+          style={{
+            boxShadow: '0 0 20px rgba(255,255,255,0.8), inset 0 0 20px rgba(255,255,255,0.3)'
+          }}
+        ></div>
 
-          <div 
-            id='ring'
-            className='absolute inset-8 border-4 rounded-full border-white/80'
-            style={{
-              boxShadow: '0 0 20px rgba(255,255,255,0.8), inset 0 0 20px rgba(255,255,255,0.3)'
-            }}
-          ></div>
+        <div
+          className='ring absolute inset-8 border-4 rounded-full border-white/80 opacity-0'
+          style={{
+            boxShadow: '0 0 20px rgba(255,255,255,0.8), inset 0 0 20px rgba(255,255,255,0.3)'
+          }}
+        ></div>
 
-          <div className='absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-white' />
-          <div className='absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white' />
-          <div className='absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-white' />
-          <div className='absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-white' />
-        </div>
-      )}
+        <div className='bracket absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-white opacity-0' />
+        <div className='bracket absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white opacity-0' />
+        <div className='bracket absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-white opacity-0' />
+        <div className='bracket absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-white opacity-0' />
+      </div>
 
       <div 
         className={`absolute inset-0 transition-all duration-300 ${
