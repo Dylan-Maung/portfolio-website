@@ -2,11 +2,9 @@
 
 Personal portfolio showcasing my projects, experience and skills as a software developer.
 
-> 🚧 **Work in Progress** - Currently building out additional sections
-
 ## 🔗 Links
 
-- **Website:** https://dylan-maung.github.io/portfolio-website/
+- **Live Site:** https://dylan-maung.github.io/portfolio-website/
 - **LinkedIn:** https://www.linkedin.com/in/dylan-maung-741975220/
 
 ## 🛠️ Tech Stack
@@ -19,7 +17,7 @@ Personal portfolio showcasing my projects, experience and skills as a software d
 
 ## ✨ Features
 
-- 3D graphics and custom models (Three.js)
+- 3D graphics and custom models (Three.js + Blender)
 - Smooth scroll animations (GSAP)
 - Responsive design
 - Interactive UI elements
