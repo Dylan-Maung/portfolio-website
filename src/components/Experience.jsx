@@ -3,7 +3,10 @@ import NeonText from './ui/NeonText'
 import ExperienceCard from './ExperienceCard';
 import { EXPERIENCE_LIST } from '../constants/constants'
 import { useGSAP } from '@gsap/react';
-import { fadeInFromBottom, fadeInFromLeft, fadeInFromRight } from '../utils/animations';
+import { fadeInFromBottom } from '../utils/animations';
+import { ScrollTrigger } from 'gsap/all';
+import { gsap } from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
   const timelineStart = 2020;
@@ -23,12 +26,22 @@ const Experience = () => {
 
   useGSAP(() => {
     fadeInFromBottom("#header", {duration: 1});
-    fadeInFromLeft(".experienceCard.cardLeft", {duration: 1, stagger: 0.4});
-    fadeInFromRight(".experienceCard.cardRight", {duration: 1, stagger: 0.4});
+
+    ScrollTrigger.batch(".experienceCard.cardLeft", {
+      onEnter: (elements) => {
+        gsap.fromTo(elements, {x: -200, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2});
+      }
+    });
+
+    ScrollTrigger.batch(".experienceCard.cardRight", {
+      onEnter: (elements) => {
+        gsap.fromTo(elements, {x: 200, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2});
+      }
+    }, []);
   })
 
   return (
-    <section id="experience" className='w-full min-h-screen relative overflow-hidden pt-20 pb-20'>
+    <section id="experience" className='w-full min-h-screen relative pt-20 pb-20'>
       <div className='flex flex-col justify-center items-center mb-16'>
           <NeonText>
             <h1 id="header" className='md:text-6xl uppercase pb-20'>

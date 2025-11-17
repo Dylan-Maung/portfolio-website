@@ -3,7 +3,7 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
  export const PROJECT_LIST = [
     {
       id: 1,
-      title: "Bingeflix",
+      title: "BingeFlix",
       tech: ["Express.js", "HTML", "MongoDB", "Node.js", "React", "Tailwind CSS"],
       description: "Unified streaming search platform",
     },
