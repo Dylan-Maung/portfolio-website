@@ -26,6 +26,7 @@ const Hero = () => {
                 <p id="hero" className='text-gray-500 text-lg md:text-xl mb-5 translate-y-20 opacity-0'>
                     Scroll deeper, the story unfolds below
                 </p>
+                
                 <div className='w-4/5 h-1/2 border border-red-950 shadow-[0_0_20px_rgba(220,38,38,0.3)] rounded-3xl mt-5 ' style={{
                     background: 'linear-gradient(to bottom, #1d3a8a, #0f2557, #0a1929, #00080D)'
                 }}>
@@ -44,7 +45,7 @@ const Hero = () => {
                         <Suspense fallback={null}>
                             <Model />
                         </Suspense>
-                        <OrbitControls  enableZoom={false}/>
+                        <OrbitControls  enableZoom={false} autoRotate={true} autoRotateSpeed={0.5}/>
                     </Canvas>
                 </div>
             </div>

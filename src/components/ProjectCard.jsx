@@ -3,7 +3,7 @@ import NeonText from './ui/NeonText'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
-const ProjectCard = ({ project, className }) => {
+const ProjectCard = ({ project, className, onClick }) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isLocked, setIsLocked] = useState(false)
   const containerRef = useRef(null)
@@ -34,6 +34,7 @@ const ProjectCard = ({ project, className }) => {
       style={{ height: '400px' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     > 
       {isLocked && (
         <div className='absolute -top-6 left-1/2 -translate-x-1/2 text-white text-xs font-mono animate-pulse z-30 uppercase'

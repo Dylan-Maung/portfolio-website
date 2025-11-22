@@ -28,7 +28,7 @@ const About = () => {
                             Hi, I'm Dylan, a recent computer engineering graduate drawn to the complexity of machine learning and AI. I'm fascinated by how mathematical models can learn and make decisions through neural networks — it's a puzzle I can't stop trying to understand.
                         </p>
                         <p className='indent-8'>
-                            When I'm not debugging code or training models, you'll find me at the climbing gym working through boulder problems. Turns out I like solving puzzles whether they're in Python or on a wall.
+                        When I'm not debugging code or diving into a new project, you'll find me at the climbing gym working through boulder problems. Turns out I like solving puzzles whether they're in Python or on a wall.
                         </p>
                     </NeonText>
                 </div>

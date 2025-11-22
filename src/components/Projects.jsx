@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import NeonText from './ui/NeonText'
 import { fadeInFromBottom, glitchInAnimation } from '../utils/animations'
 import { useGSAP } from '@gsap/react'
 import ProjectCard from './ProjectCard.jsx'
 import { PROJECT_LIST } from '../constants/constants'
+import ProjectDetails from './ProjectDetails'
 
 const Projects = () => {
   const textRef = useRef(null)
+  const [selectedProject, setSelectedProject] = useState(null)
 
   useGSAP(() => {
     glitchInAnimation(textRef.current, {delay: 0.2})
@@ -26,10 +28,18 @@ const Projects = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
           {PROJECT_LIST.map((project) => (
-            <ProjectCard key={project.id} project={project}  className="projectCard"/>
+            <ProjectCard className="projectCard cursor-pointer"
+              key={project.id} 
+              project={project} 
+              onClick={() => setSelectedProject(project)}
+            />
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectDetails details={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   )
 }
