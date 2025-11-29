@@ -4,20 +4,69 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
     {
       id: 1,
       title: "BingeFlix",
-      tech: ["Express.js", "HTML", "MongoDB", "Node.js", "React", "Tailwind CSS"],
+      techStack: ["Express.js", "HTML", "MongoDB", "Node.js", "React", "Tailwind CSS"],
       description: "Unified streaming search platform",
+      fullDescription: [
+        "In today's fragmented digital entertainment landscape, consumers struggle to locate shows across multiple " +
+        "streaming platforms, leading to frustration and decision fatigue. BingeFlix solves this by aggregating content " +
+        "from all major streaming services into a single, unified platform.",
+        
+        "Users can maintain a personalized watchlist and receive tailored content recommendations based on their viewing " +
+        "preferences and watch history. For sports enthusiasts, BingeFlix offers a dedicated feature to track favorite " +
+        "teams allowing you to keep up with game schedules, win/loss records, standings, and more.",
+
+        "Whether you're binge watching the latest series or keeping up with your team's playoff run, BingeFlix brings " +
+        "everything you love into one seamless experience."
+      ],
+      demo: [`${import.meta.env.BASE_URL}/projects/bingeflix/architecture.jpg`],
+      features: [
+        "Sign in with your Google account",
+        "Works with Netflix, Hulu, Disney+, and more",
+        "Save your favorite shows and movies",
+        "Get personalized recommendations",
+        "Track and keep up with your favorite sports teams"
+      ],
+      team: ["Arin Gadre", "Dylan Maung", "Kahan Shah", "Truman Vu",],
+      role: "Full Stack Developer",
+      contributions: [
+        "Designed and implemented the login and landing page user interfaces",
+        "Developed and integrated API calls for data retrieval, submission, and updates to backend services",
+        "Contributed to the development of sports watchlist functionality and a movie recommendation feature"
+      ],
+      challenges: [
+        "Structuring user data in MongoDB to efficiently handle both media watchlists and sports team tracking without sacrificing query performance.",
+        "Prioritizing features and managing scope within agile sprint cycles to deliver an MVP on schedule"
+      ],
+      nextSteps: [
+        "Push notifications when new episodes drop for shows in your watchlist",
+        "Full integration with sports streaming services",
+      ],
     },
     {
       id: 2,
       title: "Wildfire Prediction Model",
-      tech: ["Pandas", "PyTorch", "Python"],
+      techStack: ["Pandas", "PyTorch", "Python"],
       description: "Machine learning model for proactive wildfire risk",
+      fullDescription: [],
+      demo: [],
+      team: [],
+      role: " ",
+      challenges: [
+
+      ],
+      nextSteps: [],
     },
     {
       id: 3,
       title: "Personal Portfolio",
-      tech: ["React", "Three.js", "GSAP", "Blender", "Tailwind CSS"],
+      techStack: ["React", "Three.js", "GSAP", "Blender", "Tailwind CSS"],
       description: "3D interactive portfolio with custom animations and Blender-modeled assets",
+      fullDescription: [],
+      demo: [],
+      team: [],
+      role: " ",
+      challenges: " ",
+      nextSteps: [],
     }
   ]
 

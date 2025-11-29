@@ -88,7 +88,7 @@ const ProjectCard = ({ project, className, onClick }) => {
           </p>
           
           <div className='flex flex-wrap gap-2 justify-center'>
-            {project.tech.map((tech, i) => (
+            {project.techStack.map((tech, i) => (
               <span 
                 key={i} 
                 className='px-3 py-1 text-xs border-2 border-magenta-500 text-magenta-400 font-mono font-bold'
