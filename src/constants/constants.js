@@ -13,9 +13,8 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         
         "Users can maintain a personalized watchlist and receive tailored content recommendations based on their viewing " +
         "preferences and watch history. For sports enthusiasts, BingeFlix offers a dedicated feature to track favorite " +
-        "teams allowing you to keep up with game schedules, win/loss records, standings, and more.",
-
-        "Whether you're binge watching the latest series or keeping up with your team's playoff run, BingeFlix brings " +
+        "teams allowing you to keep up with game schedules, win/loss records, standings, and more. Whether you're " +
+        "binge watching the latest series or keeping up with your team's playoff run, BingeFlix brings " +
         "everything you love into one seamless experience."
       ],
       demo: [`${import.meta.env.BASE_URL}/projects/bingeflix/architecture.jpg`],
@@ -26,7 +25,7 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Get personalized recommendations",
         "Track and keep up with your favorite sports teams"
       ],
-      team: ["Arin Gadre", "Dylan Maung", "Kahan Shah", "Truman Vu",],
+      team: "Arin Gadre, Dylan Maung, Kahan Shah, Truman Vu",
       role: "Full Stack Developer",
       contributions: [
         "Designed and implemented the login and landing page user interfaces",
@@ -37,36 +36,110 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Structuring user data in MongoDB to efficiently handle both media watchlists and sports team tracking without sacrificing query performance.",
         "Prioritizing features and managing scope within agile sprint cycles to deliver an MVP on schedule"
       ],
-      nextSteps: [
-        "Push notifications when new episodes drop for shows in your watchlist",
-        "Full integration with sports streaming services",
-      ],
+      nextSteps: {
+        introduction: "",
+        
+        futureFeatures: [
+          "Push notifications when new episodes drop for shows in your watchlist",
+          "Full integration with sports streaming services",
+        ],
+        
+        impact: "",
+      }
     },
     {
       id: 2,
       title: "Wildfire Prediction Model",
       techStack: ["Pandas", "PyTorch", "Python"],
       description: "Machine learning model for proactive wildfire risk",
-      fullDescription: [],
-      demo: [],
-      team: [],
-      role: " ",
-      challenges: [
-
+      fullDescription: [
+        "Wildfires represent a significant natural disaster with devastating consequences for human communities, " +
+        "wildlife habitats, and environmental ecosystems. Existing wildfire detection systems face critical limitations, " +
+        "including delayed response times, operational inefficiencies, and high implementation costs that prevent " +
+        "widespread adoption and effective early intervention.",
+        
+        "Our solution involved designing and training a custom Convolutional Neural Network (CNN) architecture from " +
+        "the ground up to predict wildfire risk through satellite imagery analysis. Using a pre-labeled Kaggle dataset, " +
+        "we trained the model to classify satellite images and assess wildfire probability.The project included " +
+        "benchmarking against fine-tuned industry-standard models such as ResNet and VGG, with our custom " +
+        "architecture demonstrating comparable performance while maintaining scalability for real-world deployment."
       ],
-      nextSteps: [],
+      features: [
+        "Custom CNN architecture designed for satellite imagery analysis",
+        "Trained on a labeled dataset with over 40,000 wildfire satellite images",
+        "Wildfire risk prediction from satellite data",
+        "Benchmarked against industry-standard models including ResNet and VGG",
+        "Achieved 95% accuracy and 92% recall on the test set"
+      ],
+      demo: null,
+      team: "Elton Zeng, Daniel Hong, Dylan Maung, Peter Lee, William Ho",
+      role: "Model Training & Benchmarking Engineer",
+      challenges: [
+        "Training dataset limited to Southern Quebec region, potentially introducing geographical bias and " +
+        "reducing model generalization to other climates and terrain types",
+        
+        "Inherent difficulty in predicting wildfire risk from satellite imagery alone without additional " +
+        "contextual data such as weather patterns, humidity levels, and vegetation dryness",
+        
+        "Limited access to high-performance computing resources (GPUs/TPUs), constraining training time and " +
+        "ability to experiment with larger, more complex model architectures"
+      ],
+      nextSteps: {
+        introduction: "The next phase of development focuses on expanding the model's capabilities and preparing " +
+          "it for real-world deployment as part of wildfire early warning systems.",
+        
+        futureFeatures: [
+          "Integrate multimodal data sources including weather patterns, geographical features, and vegetation data",
+          "Expand training dataset to include diverse geographical regions for improved generalization",
+          "Develop an interactive heat map visualization to display wildfire risk predictions geographically"
+        ],
+        
+        impact: "These enhancements would enable the model to serve as a comprehensive early warning system, potentially " +
+          "saving lives and preventing environmental devastation through faster, more accurate predictions."
+      }
     },
     {
       id: 3,
       title: "Personal Portfolio",
       techStack: ["React", "Three.js", "GSAP", "Blender", "Tailwind CSS"],
       description: "3D interactive portfolio with custom animations and Blender-modeled assets",
-      fullDescription: [],
+      fullDescription: [
+        "A personal portfolio website designed to showcase my professional work experience, technical projects, and " +
+        "development skills through an interactive and visually engaging UI. Rather than a static resume, this" +
+        "portfolios incorporates custom 3D assets and immersive animations to create a memorable user experience.",
+        
+        "Built with modern web technologies, the portfolio features a custom 3D Orthrus Turtle model created from " +
+        "scratch in Blender, interactive Three.js scenes that respond to user input, and smooth GSAP-powered animations " +
+        "that guide visitors through my work. Each project has an in-depth breakdown, including demos, visual features, " +
+        "and more."
+      ],
+      features: [
+        "Interactive 3D models and animations",
+        "GSAP ScrollTrigger animations throughout",
+        "Developer bio and technical skills",
+        "Work experience timeline",
+        "Project showcases with demos",
+        "Contact information including social links and resume"
+      ],
       demo: [],
-      team: [],
-      role: " ",
-      challenges: " ",
-      nextSteps: [],
+      team: null,
+      role: "Frontend Developer & 3D Designer",
+      challenges: [
+        "Learning new development tools from scratch, including Blender for 3D modeling, Three.js for interactive " +
+        "scenes, and GSAP for complex animations.",
+
+        "Designing and wireframing the site's visual layout and user experience to ensure intuitive navigation " +
+        "and smooth transitions between sections while incorporating 3D assets and animations.",
+      ],
+      nextSteps: {
+        introduction: "",
+        
+        futureFeatures: [
+          
+        ],
+        
+        impact: "",
+      }
     }
   ]
 

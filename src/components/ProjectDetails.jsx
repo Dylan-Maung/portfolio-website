@@ -12,12 +12,13 @@ import KeyFeatures from './ProjectSections/KeyFeatures'
 import ChallengesSolutions from './ProjectSections/ChallengesSolutions'
 import MyRole from './ProjectSections/MyRole'
 import FuturePlans from './ProjectSections/FuturePlans'
+import NeonLine from './ui/NeonLine'
 
 const ProjectDetails = ({details, onClose}) => {
   const containerRef = useRef(null)
   const circleRef = useRef(null)
   const [isHovered, setIsHovered] = useState(null)
-  const sections = ["Overview", "Demo", "Key Features", "Challenges & Solutions", "My Role", "Future Plans"]
+  const sections = ["Overview", "Demo", "Challenges & Solutions", "My Role", "Future Plans"]
   const [displayedSection, setDisplayedSection] = useState(null)
   const outerMeshRef = useRef(null)
   const innerMeshRef = useRef(null)
@@ -77,7 +78,6 @@ const ProjectDetails = ({details, onClose}) => {
 
       tl.call(() => {
         setAnimationComplete(true)
-        navigate(`/project/${section.toLowerCase().replace(/\s+/g, '-')}`)
       })
     }
     
@@ -102,8 +102,13 @@ const ProjectDetails = ({details, onClose}) => {
           
           <NeonText><h1 className='text-4xl uppercase mb-4'>{details.title}</h1> </NeonText>
           <h3 className='text-sm uppercase mb-4'>{details.description}</h3>
+
+          <div className='w-full h-[40px]'> 
+            <NeonLine />
+          </div>
           
-          <div className='h-[700px] w-full relative border border-red-400'>
+          
+          <div className='h-[700px] w-full relative'>
             <Canvas camera={{ position: [0, 0, 4], fov: 80 }}>
               <mesh ref={outerMeshRef}>
                 <sphereGeometry args={[2, 32, 32]} />
@@ -120,12 +125,12 @@ const ProjectDetails = ({details, onClose}) => {
 
             {animationComplete && (
               <div className='absolute inset-0 flex items-center justify-center'>
-                {React.createElement(sectionComponents[displayedSection])}
+                {React.createElement(sectionComponents[displayedSection], {details: details})}
               </div>
             )}
           </div>
 
-          <div className='w-full h-1/6 flex overflow-x-auto uppercase border border-red-400'>
+          <div className='w-full h-1/6 flex overflow-x-auto uppercase'>
             <div className='flex justify-center items-center items-center gap-24 flex-none pr-24'
                 style={{ animation: 'recycle 30s infinite linear' }}
               >
