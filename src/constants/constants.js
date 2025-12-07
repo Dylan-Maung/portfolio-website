@@ -32,19 +32,37 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Developed and integrated API calls for data retrieval, submission, and updates to backend services",
         "Contributed to the development of sports watchlist functionality and a movie recommendation feature"
       ],
-      challenges: [
-        "Structuring user data in MongoDB to efficiently handle both media watchlists and sports team tracking without sacrificing query performance.",
-        "Prioritizing features and managing scope within agile sprint cycles to deliver an MVP on schedule"
-      ],
+      challengesSolutions: {
+        challenges: [
+          "Structuring user data in MongoDB to efficiently handle both media watchlists and " +
+          "sports team tracking without sacrificing query performance.",
+
+          "Prioritizing features and managing scope within agile sprint cycles to deliver an MVP on schedule"
+        ],
+        solutions: [
+          "Collaborated with the team to design a flexible MongoDB schema that efficiently supported all " +
+          "app features while maintaining intuitive data relationships",
+          
+          "Implemented agile best practices including daily standups for team alignment, pair programming " +
+          "sessions to resolve technical blockers, and Jira ticket management to track progress and " +
+          "prioritize critical tasks throughout the development cycle"
+        ]
+      },
       nextSteps: {
-        introduction: "",
+        introduction: 
+          "While Bingeflix offers a comprehensive feature set that streamlines the user experience, " +
+          "there are opportunities to enhance the platform further by providing real-time updates for " +
+          "favorite media and expanding streaming service integrations",
         
         futureFeatures: [
           "Push notifications when new episodes drop for shows in your watchlist",
-          "Full integration with sports streaming services",
+          "Full integration with sports streaming services to enable live game viewing"
         ],
         
-        impact: "",
+        impact: 
+          "These enhancements will enable users to receive timely notifications when new episodes of " +
+          "their favorite shows are released, while also providing direct access to streaming services that offer " +
+          "live sports games rather than just viewing statistics and scores"
       }
     },
     {
@@ -74,16 +92,29 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
       demo: null,
       team: "Elton Zeng, Daniel Hong, Dylan Maung, Peter Lee, William Ho",
       role: "Model Training & Benchmarking Engineer",
-      challenges: [
-        "Training dataset limited to Southern Quebec region, potentially introducing geographical bias and " +
-        "reducing model generalization to other climates and terrain types",
-        
-        "Inherent difficulty in predicting wildfire risk from satellite imagery alone without additional " +
-        "contextual data such as weather patterns, humidity levels, and vegetation dryness",
-        
-        "Limited access to high-performance computing resources (GPUs/TPUs), constraining training time and " +
-        "ability to experiment with larger, more complex model architectures"
-      ],
+      challengesSolutions: {
+        challenges: [
+          "Training dataset limited to Southern Quebec region, potentially introducing geographical bias and " +
+          "reducing model generalization to other climates and terrain types",
+          
+          "Inherent difficulty in predicting wildfire risk from satellite imagery alone without additional " +
+          "contextual data such as weather patterns, humidity levels, and vegetation dryness",
+          
+          "Limited access to high-performance computing resources (GPUs/TPUs), constraining training time and " +
+          "ability to experiment with larger, more complex model architectures"
+        ],
+        solutions: [
+          "Optimized the model architecture by balancing the number of layers to achieve competitive " +
+          "performance while maintaining reasonable training times on available hardware",
+          
+          "Identified multimodal data integration (weather patterns, geographical features, and vegetation data) as a " +
+          "key priority for future development to enhance the model's predictive capabilities and address the " +
+          "limitations of satellite imagery alone",
+          
+          "Leveraged accessible computing resources including personal GPUs and Google Colab's free tier, " +
+          "strategically scheduling training sessions to maximize available compute time within budget constraints"
+        ]
+      },
       nextSteps: {
         introduction: "The next phase of development focuses on expanding the model's capabilities and preparing " +
           "it for real-world deployment as part of wildfire early warning systems.",
@@ -124,13 +155,23 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
       demo: [],
       team: null,
       role: "Frontend Developer & 3D Designer",
-      challenges: [
-        "Learning new development tools from scratch, including Blender for 3D modeling, Three.js for interactive " +
-        "scenes, and GSAP for complex animations.",
+      challengesSolutions: {
+        challenges: [
+          "Learning new development tools from scratch, including Blender for 3D modeling, Three.js for interactive " +
+          "scenes, and GSAP for complex animations.",
 
-        "Designing and wireframing the site's visual layout and user experience to ensure intuitive navigation " +
-        "and smooth transitions between sections while incorporating 3D assets and animations.",
-      ],
+          "Designing and wireframing the site's visual layout and user experience to ensure intuitive navigation " +
+          "and smooth transitions between sections while incorporating 3D assets and animations.",
+        ],
+        solutions: [
+          "Watched comprehensive tutorials and completed follow-along projects to build foundational skills, " +
+          "studied official documentation to understand core concepts, and experimented hands-on to " +
+          "get familiar with each tool's capabilities and workflows.",
+
+          "Used trial and error to refine layouts and interactions, brainstormed ideas that fit the site's theme, " +
+          "and researched films, shows, and characters with similar aesthetics for visual inspiration.",
+        ]
+      },
       nextSteps: {
         introduction: "",
         

@@ -179,29 +179,12 @@ export default ProjectDetails
               ))}
             </div>
             
-            <div>
-              {details.fullDescription.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
 
             
             
             <ul>
               {details.techStack.map((tech, i) => (
                 <li key={i}>{tech}</li>
-              ))}
-            </ul>
-
-            <ul>
-              {details.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
-
-            <ul>
-              {details.challenges.map((challenge, i) => (
-                <li key={i}>{challenge}</li>
               ))}
             </ul>
             
@@ -217,15 +200,4 @@ export default ProjectDetails
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-
-            <div>
-              {details.challenges.map((challenge, i) => (
-                <p key={i}>{challenge}</p>
-              ))}
-            </div>
-
-            <div>
-              {details.nextSteps.map((step, i) => (
-                <p key={i}>{step}</p>
-              ))}
-            </div> */}
+*/}
