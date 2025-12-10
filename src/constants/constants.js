@@ -27,11 +27,17 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
       ],
       team: "Arin Gadre, Dylan Maung, Kahan Shah, Truman Vu",
       role: "Full Stack Developer",
-      contributions: [
-        "Designed and implemented the login and landing page user interfaces",
-        "Developed and integrated API calls for data retrieval, submission, and updates to backend services",
-        "Contributed to the development of sports watchlist functionality and a movie recommendation feature"
-      ],
+      contributions: {
+        responsibilities: "Developed key frontend features and contributed to API integration for BingeFlix, focusing on creating an intuitive " +
+        "and seamless user experience. Collaborated with a team of 4 to deliver core features within a 3-month timeline.",
+
+        accomplishments: [
+          "Designed and implemented the login and landing page user interfaces using React and Tailwind CSS",
+          "Developed and integrated API calls for data retrieval, submission, and updates to backend services",
+          "Contributed to the development of sports watchlist functionality, enabling users to track their favorite teams",
+          "Integrated and refined the movie recommendation feature that utilises the ChatGPT API, debugging edge cases and optimizing prompts for more relevant suggestions"
+        ],
+      },
       challengesSolutions: {
         challenges: [
           "Structuring user data in MongoDB to efficiently handle both media watchlists and " +
@@ -92,6 +98,13 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
       demo: null,
       team: "Elton Zeng, Daniel Hong, Dylan Maung, Peter Lee, William Ho",
       role: "Model Training & Benchmarking Engineer",
+      contributions: {
+        responsibilities: "",
+
+        accomplishments: [
+          
+        ]
+      },
       challengesSolutions: {
         challenges: [
           "Training dataset limited to Southern Quebec region, potentially introducing geographical bias and " +
@@ -155,6 +168,18 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
       demo: [],
       team: null,
       role: "Frontend Developer & 3D Designer",
+      contributions: {
+        responsibilities: "Conceptualized and built a fully interactive portfolio website. Wireframed the " +
+        "user experience flow and implemented an interactive frontend that showcases my technical projects, work experience, " +
+        "and development skills. Iteratively refined the UI based on user feedback to create an intuitive, engaging interface.",
+
+        accomplishments: [
+          "Modeled a custom 3D Orthrus Turtle asset in Blender",
+          "Implemented interactive 3D scenes using Three.js and React Three Fiber",
+          "Designed user flows through wireframing and recruiter-focused user stories to guide portfolio navigation",
+          "Crafted GSAP timeline animations and ScrollTrigger effects for smooth, engaging transitions"
+        ]
+      },
       challengesSolutions: {
         challenges: [
           "Learning new development tools from scratch, including Blender for 3D modeling, Three.js for interactive " +

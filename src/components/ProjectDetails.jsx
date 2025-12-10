@@ -168,36 +168,3 @@ const ProjectDetails = ({details, onClose}) => {
 }
 
 export default ProjectDetails
-
-{/* <div>
-              {details.demo.map((media, i) => (
-                <img 
-                  key={i} 
-                  src={media} 
-                  alt={`BingeFlix feature ${i + 1}`}
-                />
-              ))}
-            </div>
-            
-
-            
-            
-            <ul>
-              {details.techStack.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
-            
-            <ul>
-              {details.team.map((member, i) => (
-                <li key={i}>{member}</li>
-              ))}
-            </ul>
-            <h2>{details.role}</h2>
-
-            <div>
-              {details.contributions.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-*/}
