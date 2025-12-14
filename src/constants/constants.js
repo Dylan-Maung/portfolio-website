@@ -17,7 +17,38 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "binge watching the latest series or keeping up with your team's playoff run, BingeFlix brings " +
         "everything you love into one seamless experience."
       ],
-      demo: [`${import.meta.env.BASE_URL}/projects/bingeflix/architecture.jpg`],
+      demo: [
+        {
+          media: "https://www.youtube.com/embed/WiLgSWHEQ1E?si=DQGsp4X8LLqn5s6c",
+          alt: "Website Demo",
+          caption: "Full feature walkthrough"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/bingeflix/watchlist.png`,
+          alt: "Movies & Shows Watchlist",
+          caption: "Unified watchlist aggregating content across Netflix, Hulu, Disney+, HBO Max, and more"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/bingeflix/sportsWatchlist.png`,
+          alt: "Sports Watchlist",
+          caption: "Sports tracking dashboard that allows you to keep up with team schedules, standings, and more"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/bingeflix/recommendations.png`,
+          alt: "Movies & Shows Recommendations",
+          caption: "AI-powered movie and show recommendations using ChatGPT based on watchlist preferences"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/bingeflix/featuredMedia.png`,
+          alt: "Featured Media",
+          caption: "Featured content carousel showcasing trending movies and shows (currently displaying curated selections)"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/bingeflix/architecture.jpg`,
+          alt: "System Architecture",
+          caption: "Full-stack architecture aggregating data from streaming APIs and sports sources via URL parameters"
+        }
+      ],
       features: [
         "Sign in with your Google account",
         "Works with Netflix, Hulu, Disney+, and more",
@@ -62,7 +93,8 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         
         futureFeatures: [
           "Push notifications when new episodes drop for shows in your watchlist",
-          "Full integration with sports streaming services to enable live game viewing"
+          "Full integration with sports streaming services to enable live game viewing",
+          "Connect featured carousel to recommendation API for dynamic and trending content"
         ],
         
         impact: 
@@ -95,14 +127,27 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Benchmarked against industry-standard models including ResNet and VGG",
         "Achieved 95% accuracy and 92% recall on the test set"
       ],
-      demo: null,
+      demo: [
+        {
+          media: `${import.meta.env.BASE_URL}projects/wildfire/customModelResults.png`,
+          alt: "CNN from Scratch Results & Architecture",
+          caption: "CNN from scratch architecture achieving 95% accuracy and 92% recall on wildfire prediction test set"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/wildfire/benchmarkResults.png`,
+          alt: "Benchmark Comparison",
+          caption: "Performance comparison against fine-tuned ResNet, VGG, and other models demonstrating competitive results"
+        }
+      ],
       team: "Elton Zeng, Daniel Hong, Dylan Maung, Peter Lee, William Ho",
       role: "Model Training & Benchmarking Engineer",
       contributions: {
-        responsibilities: "",
+        responsibilities: "Collaborated with team to identify an impactful and underexplored machine learning application. " +
+          "Led model training, fine-tuning, and benchmarking tasks to compare custom CNN performance against industry standards.",
 
         accomplishments: [
-          
+          "Trained custom CNN model achieving 95% accuracy on test set from 40,000+ satellite images",
+          "Finetuned VGG-16 mnodel for performance benchmarking against custom architecture"
         ]
       },
       challengesSolutions: {
@@ -145,7 +190,7 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
     {
       id: 3,
       title: "Personal Portfolio",
-      techStack: ["React", "Three.js", "GSAP", "Blender", "Tailwind CSS"],
+      techStack: ["React", "Three.js", "GSAP", "Blender", "Tailwind CSS", "Vite"],
       description: "3D interactive portfolio with custom animations and Blender-modeled assets",
       fullDescription: [
         "A personal portfolio website designed to showcase my professional work experience, technical projects, and " +
@@ -165,7 +210,20 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Project showcases with demos",
         "Contact information including social links and resume"
       ],
-      demo: [],
+      demo: [
+        {
+          media: "https://www.youtube.com/embed/PYbg6k8nICg?si=ty-MnXCkyP1X9vOH",
+          alt: "Website Demo",
+          caption: "Demonstration of my portfolio website showcasing custom Three.js 3D models, smooth " +
+            "GSAP scroll animations, and interactive project presentations. Built from scratch with React and " +
+            "modern web development tools"
+        },
+        {
+          media: `${import.meta.env.BASE_URL}projects/portfolio/scene.png`,
+          alt: "Three.js Scene",
+          caption: "Three.js scene featuring custom 3D model created in Blender, particle effects, and dynamic mesh geometry"
+        },
+      ],
       team: null,
       role: "Frontend Developer & 3D Designer",
       contributions: {
@@ -198,13 +256,16 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         ]
       },
       nextSteps: {
-        introduction: "",
+        introduction: "This portfolio will continue to evolve as I gain new experiences and explore modern web " +
+          "technologies, serving as both a professional showcase and a creative outlet.",
         
         futureFeatures: [
-          
+          "Add more interactive 3D elements and animations throughout the site",
+          "Add more projects as I build them"
         ],
         
-        impact: "",
+        impact: "Beyond showcasing my work, this portfolio demonstrates my ability to blend technical skills with " +
+          "creative vision, creating experiences that are both functional and memorable."
       }
     }
   ]
@@ -288,5 +349,4 @@ export const NAV_ITEMS = ["About", "Projects", "Experience", "Contact"]
         "Led regular dissections and demonstrations on a variety of scientific topics to crowds of over 15 people"
       ],
     }
-
   ]
